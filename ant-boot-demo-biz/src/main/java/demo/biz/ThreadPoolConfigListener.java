@@ -33,4 +33,9 @@ public class ThreadPoolConfigListener {
     public void listenPoolMax(List<ModifiedProperty> modifiedProperties) {
         logger.info("监听到线程池最大配置被修改：" + ToString.toString(modifiedProperties));
     }
+
+    @ListenConfigModified(prefix = "")
+    public void listenAll(List<ModifiedProperty> modifiedProperties) {
+        logger.info("监听到有配置被修改：" + ToString.toString(modifiedProperties));
+    }
 }
