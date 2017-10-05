@@ -15,7 +15,7 @@ import org.springframework.boot.SpringApplication;
 /**
  * 程序启动入口
  */
-@AntBootApplication(appCode = "ant-boot-demo", httpPort = 8080)
+@AntBootApplication(appCode = "ant-boot-demo", httpPort = 8083)
 public class Main {
     public static void main(String[] args) {
         Apps.setProfileIfNotExists("dev");
