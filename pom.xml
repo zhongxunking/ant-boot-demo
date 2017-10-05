@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.antframework.boot</groupId>
@@ -14,16 +15,14 @@
 
     <name>ant-boot-demo</name>
 
-    <dependencyManagement>
-    </dependencyManagement>
-  <modules>
-    <module>ant-boot-demo-facade</module>
-    <module>ant-boot-demo-common</module>
-    <module>ant-boot-demo-dal</module>
-    <module>ant-boot-demo-integration</module>
-    <module>ant-boot-demo-biz</module>
-    <module>ant-boot-demo-web</module>
-    <module>ant-boot-demo-assemble</module>
-    <module>ant-boot-demo-test</module>
-  </modules>
+    <modules>
+        <module>ant-boot-demo-facade</module>
+        <module>ant-boot-demo-common</module>
+        <module>ant-boot-demo-dal</module>
+        <module>ant-boot-demo-integration</module>
+        <module>ant-boot-demo-biz</module>
+        <module>ant-boot-demo-web</module>
+        <module>ant-boot-demo-assemble</module>
+        <module>ant-boot-demo-test</module>
+    </modules>
 </project>
