@@ -35,5 +35,10 @@
             <groupId>org.antframework.boot</groupId>
             <artifactId>ant-boot-starter-bekit</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.antframework.boot</groupId>
+            <artifactId>ant-boot-starter-config</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 </project>
