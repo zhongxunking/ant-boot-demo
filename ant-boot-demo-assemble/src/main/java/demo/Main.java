@@ -18,10 +18,6 @@ import org.springframework.boot.SpringApplication;
 @AntBootApplication(appCode = "ant-boot-demo")
 public class Main {
     public static void main(String[] args) {
-        String baseDir=System.getProperty("user.home")+"/var";
-        System.setProperty("app.config-path", baseDir+"/config/ant-boot-demo");
-        System.setProperty("app.data-path", baseDir+"/data/ant-boot-demo");
-        System.setProperty("app.log-path", baseDir+"/log/ant-boot-demo");
         Apps.setProfileIfNotExists("dev");
         SpringApplication.run(Main.class, args);
     }
