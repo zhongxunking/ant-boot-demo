@@ -15,6 +15,11 @@ import org.bekit.service.annotation.service.ServiceExecute;
 import org.bekit.service.engine.ServiceContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.ValueOperations;
+
+import java.util.Random;
 
 /**
  *
@@ -22,9 +27,25 @@ import org.slf4j.LoggerFactory;
 @Service(enableTx = true)
 public class AddUserService {
     private static final Logger logger = LoggerFactory.getLogger(AddUserService.class);
+    private Random random = new Random();
+    @Autowired
+    private RedisTemplate redisTemplate;
+    @Autowired
+    private MyCacheable myCacheable;
 
     @ServiceExecute
     public void execute(ServiceContext<AddUserOrder, AddUserResult> context) {
         logger.info("接收到添加用户请求：{}", context.getOrder());
+        ValueOperations valueOperations = redisTemplate.opsForValue();
+        valueOperations.set("aaaa.bbbb", "hello myworld" + random.nextInt(1000));
+        String aa = (String) valueOperations.get("aaaa.bbbb");
+
+        String userName1 = myCacheable.getUserName("00111111");
+        String userName2 = myCacheable.getUserName("00222211");
+        String userName3 = myCacheable.getUserName("00333311");
+
+        String userName1_bak = myCacheable.getUserName("00111111");
+        String userName2_bak = myCacheable.getUserName("00222211");
+        String userName3_bak = myCacheable.getUserName("00333311");
     }
 }
