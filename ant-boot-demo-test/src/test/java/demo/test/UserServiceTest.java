@@ -14,11 +14,13 @@ import demo.facade.order.AddUserOrder;
 import demo.facade.result.AddUserResult;
 import org.antframework.common.util.facade.Status;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 
 /**
  *
  */
+@Ignore
 public class UserServiceTest extends AbstractTest {
     @Reference(group = "demo", version = "1.0")
     private UserService userService;
