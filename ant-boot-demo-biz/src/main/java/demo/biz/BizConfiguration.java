@@ -8,11 +8,19 @@
  */
 package demo.biz;
 
+import org.antframework.ids.UID;
 import org.springframework.context.annotation.Configuration;
+
+import javax.annotation.PostConstruct;
 
 /**
  * biz层配置
  */
 @Configuration
 public class BizConfiguration {
+
+    @PostConstruct
+    public void init() {
+        String id = UID.newId();
+    }
 }

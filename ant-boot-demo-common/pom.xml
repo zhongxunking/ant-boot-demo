@@ -24,5 +24,9 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.antframework.boot</groupId>
+            <artifactId>ant-boot-starter-ids</artifactId>
+        </dependency>
     </dependencies>
 </project>
