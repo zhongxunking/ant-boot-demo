@@ -8,8 +8,8 @@
  */
 package demo.test;
 
-import org.antframework.boot.core.Apps;
 import demo.Main;
+import org.antframework.boot.core.Apps;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,6 +26,6 @@ public class AbstractTest {
 
     static {
         // 设置使用环境
-        Apps.setProfileIfNotExists("dev");
+        Apps.setProfileIfAbsent("dev");
     }
 }

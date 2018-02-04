@@ -20,7 +20,7 @@ import org.springframework.cache.annotation.EnableCaching;
 @EnableCaching
 public class Main {
     public static void main(String[] args) {
-        Apps.setProfileIfNotExists("dev");
+        Apps.setProfileIfAbsent("dev");
         SpringApplication.run(Main.class, args);
     }
 }
