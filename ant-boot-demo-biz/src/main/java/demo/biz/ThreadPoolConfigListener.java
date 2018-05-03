@@ -8,10 +8,10 @@
  */
 package demo.biz;
 
+import org.antframework.boot.config.listener.annotation.ConfigListener;
+import org.antframework.boot.config.listener.annotation.ListenConfigChanged;
 import org.antframework.common.util.tostring.ToString;
-import org.antframework.configcenter.client.core.ModifiedProperty;
-import org.antframework.configcenter.client.spring.listener.annotation.ConfigListener;
-import org.antframework.configcenter.client.spring.listener.annotation.ListenConfigModified;
+import org.antframework.configcenter.client.core.ChangedProperty;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -24,18 +24,18 @@ import java.util.List;
 public class ThreadPoolConfigListener {
     private static final Logger logger = LoggerFactory.getLogger(ThreadPoolConfigListener.class);
 
-    @ListenConfigModified(prefix = "pool")
-    public void listenPool(List<ModifiedProperty> modifiedProperties) {
-        logger.info("监听到线程池配置被修改：" + ToString.toString(modifiedProperties));
+    @ListenConfigChanged(prefix = "pool")
+    public void listenPool(List<ChangedProperty> changedProperties) {
+        logger.info("监听到线程池配置被修改：" + ToString.toString(changedProperties));
     }
 
-    @ListenConfigModified(prefix = "pool.max")
-    public void listenPoolMax(List<ModifiedProperty> modifiedProperties) {
-        logger.info("监听到线程池最大配置被修改：" + ToString.toString(modifiedProperties));
+    @ListenConfigChanged(prefix = "pool.max")
+    public void listenPoolMax(List<ChangedProperty> changedProperties) {
+        logger.info("监听到线程池最大配置被修改：" + ToString.toString(changedProperties));
     }
 
-    @ListenConfigModified(prefix = "")
-    public void listenAll(List<ModifiedProperty> modifiedProperties) {
-        logger.info("监听到有配置被修改：" + ToString.toString(modifiedProperties));
+    @ListenConfigChanged(prefix = "")
+    public void listenAll(List<ChangedProperty> changedProperties) {
+        logger.info("监听到有配置被修改：" + ToString.toString(changedProperties));
     }
 }
