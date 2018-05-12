@@ -16,7 +16,7 @@ import org.springframework.cache.annotation.EnableCaching;
 /**
  * 程序启动入口
  */
-@AntBootApplication(appCode = "ant-boot-demo")
+@AntBootApplication(appId = "ant-boot-demo")
 @EnableCaching
 public class Main {
     public static void main(String[] args) {
