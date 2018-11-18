@@ -8,7 +8,8 @@
  */
 package demo.biz;
 
-import org.antframework.configcenter.spring.ConfigContexts;
+import org.antframework.configcenter.client.Config;
+import org.antframework.configcenter.spring.ConfigsContexts;
 import org.antframework.ids.UID;
 import org.springframework.context.annotation.Configuration;
 
@@ -23,6 +24,6 @@ public class BizConfiguration {
     @PostConstruct
     public void init() {
         String id = UID.newId();
-        ConfigContexts.getConfig("common");
+        Config commonConfig = ConfigsContexts.getConfig("common");
     }
 }
