@@ -21,9 +21,5 @@
             <artifactId>ant-boot-demo-common</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-        <dependency>
-            <groupId>org.antframework.boot</groupId>
-            <artifactId>ant-boot-starter-dubbo</artifactId>
-        </dependency>
     </dependencies>
 </project>

@@ -39,9 +39,5 @@
             <groupId>org.antframework.boot</groupId>
             <artifactId>ant-boot-starter-config</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.antframework.boot</groupId>
-            <artifactId>ant-boot-starter-redis</artifactId>
-        </dependency>
     </dependencies>
 </project>
