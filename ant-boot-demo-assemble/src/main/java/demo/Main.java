@@ -8,8 +8,8 @@
  */
 package demo;
 
-import org.antframework.boot.core.AntBootApplication;
-import org.antframework.boot.core.Apps;
+import org.antframework.boot.lang.AntBootApplication;
+import org.antframework.boot.lang.Apps;
 import org.springframework.boot.SpringApplication;
 import org.springframework.cache.annotation.EnableCaching;
 

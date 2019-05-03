@@ -9,9 +9,9 @@
 package demo.facade.order;
 
 import org.antframework.common.util.facade.AbstractOrder;
-import org.hibernate.validator.constraints.NotBlank;
 
 import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
 
 /**
  *
