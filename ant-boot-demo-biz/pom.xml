@@ -40,5 +40,10 @@
             <artifactId>configcenter-spring-boot-starter</artifactId>
             <version>1.4.0.RELEASE</version>
         </dependency>
+        <dependency>
+            <groupId>org.antframework.idcenter</groupId>
+            <artifactId>idcenter-spring-boot-starter</artifactId>
+            <version>1.3.0.RELEASE</version>
+        </dependency>
     </dependencies>
 </project>
