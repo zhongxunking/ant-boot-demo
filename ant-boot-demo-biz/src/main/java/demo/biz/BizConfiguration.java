@@ -11,6 +11,7 @@ package demo.biz;
 import org.antframework.common.util.id.Id;
 import org.antframework.idcenter.client.Ider;
 import org.antframework.idcenter.spring.IdersContexts;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 
 import javax.annotation.PostConstruct;
@@ -27,4 +28,13 @@ public class BizConfiguration {
         Id id1 = ider.acquire();
         Id id2 = ider.acquire();
     }
+
+    @Value("${aa}")
+    private String aa;
+
+    @Value("${bb}")
+    public void setBb(int bb) {
+        int b = bb;
+    }
+
 }
