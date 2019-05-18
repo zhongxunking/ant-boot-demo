@@ -29,7 +29,7 @@ public class BizConfiguration {
         Id id2 = ider.acquire();
     }
 
-    @Value("${aa}")
+    @Value("${aa:${aa2:abc}}")
     private String aa;
 
     @Value("${bb}")
