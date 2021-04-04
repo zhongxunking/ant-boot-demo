@@ -38,7 +38,7 @@
         <dependency>
             <groupId>org.antframework.configcenter</groupId>
             <artifactId>configcenter-spring-boot-starter</artifactId>
-            <version>1.6.0.RELEASE</version>
+            <version>1.6.2</version>
         </dependency>
     </dependencies>
 </project>

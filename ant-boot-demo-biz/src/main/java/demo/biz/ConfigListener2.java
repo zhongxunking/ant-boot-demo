@@ -12,7 +12,7 @@ import org.antframework.boot.env.listener.ChangedProperty;
 import org.antframework.boot.env.listener.annotation.ConfigListener;
 import org.antframework.boot.env.listener.annotation.ListenConfigChanged;
 import org.antframework.common.util.tostring.ToString;
-import org.antframework.configcenter.spring.ConfigsContexts;
+import org.antframework.configcenter.spring.ConfigContexts;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -28,7 +28,7 @@ public class ConfigListener2 {
 
     @PostConstruct
     public void init() {
-        ConfigsContexts.getConfig("common");
+        ConfigContexts.getConfig("common");
     }
 
     @ListenConfigChanged(prefix = "pool")
